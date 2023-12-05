@@ -18,13 +18,13 @@
         </svg>
       </a>
       
-      <h1>
-        <svg class="icon">
-          <use href="./assets/images/icons/sprite.svg#logo"/>
-        </svg>
-      </h1>
       
-      <nav>
+      <nav class="flex-r-c">
+        <h1>
+          <svg class="icon" id="logo" aria-label="Website's Logo" title="Website's Logo" style="width: 5em;height:2em;">
+            <use href="./assets/images/icons/sprite.svg#logo"/>
+          </svg>
+        </h1>
         <a href="#">Men</a>
         <a href="#">Collections</a>
         <a href="#">Women</a>
@@ -37,17 +37,10 @@
           <use href="./assets/images/icons/sprite.svg#cart"/>
         </svg>
         <span class="items-count"></span>
+        <img src="./assets/images/image-avatar.png" alt="">
       </div>
 
-      <img src="./assets/images/image-avatar.png" alt="">
     </header>
-
-    <div class="cartBox">
-      <div class="head">Cart</div>
-      <div class="body">
-        <p class="txt">Your Cart is empty</p>
-      </div>
-    </div>
 
     <aside id="sidenav">
       <div>
@@ -67,17 +60,12 @@
     <section>
 
       <div class="gallery">
-        <div class="big-img">
-          <svg class="icon close">
-            <use href="./assets/images/icons/sprite.svg#close"/>
-          </svg>
 
-          <div>
-            <img src="./assets/images/image-product-1.jpg" alt="" data-sort="0">
-            <img src="./assets/images/image-product-2.jpg" alt="" data-sort="1">
-            <img src="./assets/images/image-product-3.jpg" alt="" data-sort="2">
-            <img src="./assets/images/image-product-4.jpg" alt="" data-sort="3">
-          </div>
+        <div class="product-carousel">
+          <div class="product-item" style="--bg: url(./assets/images/image-product-1.jpg)" data-sort="0"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-2.jpg)" data-sort="1"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-3.jpg)" data-sort="2"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-4.jpg)" data-sort="3"></div>
 
           <svg class="icon previous">
             <use href="./assets/images/icons/sprite.svg#previous"/>
@@ -85,8 +73,12 @@
 
           <svg class="icon next">
             <use href="./assets/images/icons/sprite.svg#next"/>
-          </svg>
+          </svg> 
         </div>
+          <!-- <svg class="icon close">
+            <use href="./assets/images/icons/sprite.svg#close"/>
+          </svg> 
+          -->
 
         <ul>
           <li><img src="./assets/images/image-product-1.jpg" alt="" data-sort="0" class="active"></li>
@@ -97,7 +89,7 @@
       </div>
 
       <div class="content">
-        <p>Sneaker Company</p>
+        <b>Sneaker Company</b>
         <h2>Fall Limited Edition Sneakers</h2>
         <p>
           These low-profile sneakers are your perfect casual wear companion. Featuring a 
@@ -114,9 +106,9 @@
 
         <div class="foot">
           <div class="units">
-            <svg class="minus" width="12" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill-rule="nonzero" xlink:href="#a"/></svg>
+            <span class="minus">-</span>
             <span class="counter">0</span>
-            <svg class="plus" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill-rule="nonzero" xlink:href="#b"/></svg>
+            <span class="plus">+</span>
           </div>
           
           <button class="btn">
