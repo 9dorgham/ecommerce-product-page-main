@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | E-commerce product page</title>
+    <!-- <script src="../js/main.js" defer></script> -->
   </head>
   <body>
-    <span class="overlay"></span>
 
     <header>
-      <svg class="icon menu">
-        <use href="./assets/images/icons/sprite.svg#menu"/>
-      </svg>
+      <a href="#sidenav" id="sidenav-open-button" title="Open Menu" aria-label="Open Menu">
+        <svg class="icon menu">
+          <use href="./assets/images/icons/sprite.svg#menu"/>
+        </svg>
+      </a>
+      
       <h1>
         <svg class="icon">
           <use href="./assets/images/icons/sprite.svg#logo"/>
@@ -22,13 +25,11 @@
       </h1>
       
       <nav>
-        <ul>
-          <li>Men</li>
-          <li>Collections</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <a href="#">Men</a>
+        <a href="#">Collections</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </nav>
 
       <div class="cart">
@@ -48,9 +49,9 @@
       </div>
     </div>
 
-    <aside>
+    <aside id="sidenav">
       <div>
-        <svg class="icon close" style="cursor:pointer; fill:#ccc; width:1em; height:1em;">
+        <svg class="icon close" id="sidenav-close" title="Close Menu" aria-label="Close Menu">
           <use href="./assets/images/icons/sprite.svg#close"/>
         </svg>
       </div>
@@ -127,7 +128,5 @@
         </div>
       </div>
     </section>
-
-  <script src="../js/main.js"></script>
   </body>
 </html>
