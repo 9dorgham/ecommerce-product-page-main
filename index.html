@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | E-commerce product page</title>
     <!-- <script src="../js/main.js" defer></script> -->
+    <script src="main.js" defer></script>
   </head>
   <body>
 
@@ -32,11 +33,13 @@
         <a href="#">Contact</a>
       </nav>
 
-      <div class="cart">
-        <svg class="icon">
-          <use href="./assets/images/icons/sprite.svg#cart"/>
-        </svg>
-        <span class="items-count"></span>
+      <div class="flex-r-c">
+        <div class="cart">
+          <svg class="icon">
+            <use href="./assets/images/icons/sprite.svg#cart"/>
+          </svg>
+          <span class="items-count">2</span>
+        </div>
         <img src="./assets/images/image-avatar.png" alt="">
       </div>
 
@@ -60,33 +63,39 @@
     <section>
 
       <div class="gallery">
-
         <div class="product-carousel">
-          <div class="product-item" style="--bg: url(./assets/images/image-product-1.jpg)" data-sort="0"></div>
-          <div class="product-item" style="--bg: url(./assets/images/image-product-2.jpg)" data-sort="1"></div>
-          <div class="product-item" style="--bg: url(./assets/images/image-product-3.jpg)" data-sort="2"></div>
-          <div class="product-item" style="--bg: url(./assets/images/image-product-4.jpg)" data-sort="3"></div>
 
-          <svg class="icon previous">
-            <use href="./assets/images/icons/sprite.svg#previous"/>
-          </svg>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-1.jpg)" data-order="0"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-2.jpg)" data-order="1"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-3.jpg)" data-order="2"></div>
+          <div class="product-item" style="--bg: url(./assets/images/image-product-4.jpg)" data-order="3"></div>
 
-          <svg class="icon next">
-            <use href="./assets/images/icons/sprite.svg#next"/>
-          </svg> 
+          <button class="item-button close" role="button" aria-label="Close">
+            <svg class="icon close">
+              <use href="./assets/images/icons/sprite.svg#close"/>
+            </svg> 
+          </button>
+          <button class="item-button previous" role="button" aria-label="Go Previous">
+            <svg class="icon" title="Previous">
+              <use href="./assets/images/icons/sprite.svg#previous"/>
+            </svg>
+          </button>
+          <button class="item-button next" role="button" aria-label="Go Next">
+            <svg class="icon next">
+              <use href="./assets/images/icons/sprite.svg#next"/>
+            </svg> 
+          </button>
         </div>
-          <!-- <svg class="icon close">
-            <use href="./assets/images/icons/sprite.svg#close"/>
-          </svg> 
-          -->
 
-        <ul>
-          <li><img src="./assets/images/image-product-1.jpg" alt="" data-sort="0" class="active"></li>
-          <li><img src="./assets/images/image-product-2.jpg" alt="" data-sort="1"></li>
-          <li><img src="./assets/images/image-product-3.jpg" alt="" data-sort="2"></li>
-          <li><img src="./assets/images/image-product-4.jpg" alt="" data-sort="3"></li>
+        <ul class="carousel-nav">
+          <li data-order="0"><img src="./assets/images/image-product-1.jpg" alt="" class="active"></li>
+          <li data-order="1"><img src="./assets/images/image-product-2.jpg" alt=""></li>
+          <li data-order="2"><img src="./assets/images/image-product-3.jpg" alt=""></li>
+          <li data-order="3"><img src="./assets/images/image-product-4.jpg" alt=""></li>
         </ul>        
       </div>
+
+
 
       <div class="content">
         <b>Sneaker Company</b>
