@@ -144,26 +144,28 @@ section {
   border-radius: 0.5em;
 }
 
-.product-carousel {
+.container {
+  position: relative;
+}
+
+.carousel {
   display: grid;
   grid: 1fr / auto-flow 100%;
   overflow-x: scroll;
   gap: 1ch;
   height: 400px;
-  position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: mandatory;
   scroll-snap-align: end;
 }
-.product-carousel .product-item {
+.carousel .product-item {
   border-radius: 2ch;
   height: 100%;
   background-image: var(--bg);
   background-size: cover;
 }
 
-
-.product-carousel .item-button {
+.container .item-button {
   background-color: transparent;
   width: 3em;
   height: 3em;
